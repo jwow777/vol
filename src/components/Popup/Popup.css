@@ -96,9 +96,18 @@
   border: none !important;
 }
 
-.popup__button-phone .country-list {
+.react-tel-input .special-label {
+  display: none;
+}
+
+.react-tel-input .country-list {
   height: 150px;
   width: 899px;
+}
+
+.react-tel-input .form-control:focus {
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .popup__input-email {
@@ -166,6 +175,7 @@
 
 .popup__label-politics {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .popup__label-ring .MuiTypography-body1 {
@@ -180,5 +190,37 @@
 @media screen and (max-width: 1125px) {
   .popup__button-phone .country-list {
     width: calc(100vw - 225px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .popup__title {
+    font-weight: 500;
+    margin: 0 0 20px;
+  }
+
+  .popup__text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .popup__text_margin {
+    margin-bottom: 17px;
+  }
+
+  .popup__avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .popup__label-ring .MuiTypography-body1 {
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  .popup__button-phone .country-list {
+    width: calc(100vw - 157px);
+    height: 88px;
   }
 }
