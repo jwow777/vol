@@ -379,7 +379,7 @@ function Popup({ open, close, openPolicy }) {
           type='submit'
           variant='contained'
           className={classes.button}
-          disabled={!(state.email || state.phone) || !(state.policy && state.ring)}
+          disabled={!(state.email || state.phone) || !state.policy}
         >
           Получить доступ к закрытой beta-версии
         </Button>

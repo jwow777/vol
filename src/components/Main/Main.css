@@ -1,8 +1,5 @@
-.main__container {
-  max-width: 1440px;
-  margin: auto;
-  box-sizing: border-box;
-  padding: 80px 100px;
+.main {
+  min-height: calc(100vh - 85px);
 }
 
 .title {
@@ -34,16 +31,15 @@
 }
 
 @media screen and (max-width: 600px) {
-  .main__container {
-    padding: 0;
+  .main {
+    min-height: calc(100vh - 80px);
   }
-  
+
   .title {
     font-size: 40px;
     line-height: 40px;
     margin: 0;
   }
-
   .subtitle {
     font-weight: 400;
     font-size: 20px;
