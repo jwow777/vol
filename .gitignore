@@ -12,6 +12,7 @@
 /build
 build.rar
 vol.rar
+*.rar
 
 # misc
 .DS_Store

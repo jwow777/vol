@@ -59,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   form: {
+    width: '100%',
     display: 'grid',
     gridRowGap: 5,
     marginTop: 20,
@@ -193,7 +194,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Popup({ open, close, openPolicy }) {
+function Popup({
+  open,
+  close,
+  openPopupPolicy,
+  openPopupSuccess,
+  closePopupSuccess,
+}) {
   const [state, setState] = useState({
     communication: 'call',
     phone: '',
@@ -217,6 +224,17 @@ function Popup({ open, close, openPolicy }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    openPopupSuccess();
+    close();
+    setState({
+      communication: 'call',
+      phone: state.dialCode,
+      country: {},
+      email: '',
+      policy: true,
+      ring: true,
+    });
+    setTimeout(() => closePopupSuccess(), 5000);
     return fetch(`${window.location.href}connector.php`, {
       method: 'POST',
       headers: {
@@ -248,7 +266,6 @@ function Popup({ open, close, openPolicy }) {
     <Dialog
       open={open}
       onClose={close}
-      scroll='body'
       className={classes.container}
     >
       <IconButton onClick={close} className={classes.close}>
@@ -356,7 +373,7 @@ function Popup({ open, close, openPolicy }) {
           />
           <Typography
             className='popup__label-politics'
-            onClick={openPolicy('paper')}
+            onClick={openPopupPolicy}
           >
             политикой обработки данных
           </Typography>
