@@ -38,8 +38,8 @@ function PopupSuccess({ open, close }) {
         <Clear />
       </IconButton>
       <div className='popup__success-container'>
-        <h2 className='popup__success-title'>Спасибо за обращение</h2>
-        <p className='popup__success-subtitle'>Заявка уже в нашей CRM, мы скоро с вами свяжемся :)</p>
+        <h2 className='popup__success-title'>Спасибо за заявку</h2>
+        <p className='popup__success-subtitle'>Сейчас мы одобряем заявки в процессе очереди, не более 100 в неделю, мы свяжемся с вами, когда предоставим доступ к beta-версии</p>
         <Button className={classes.button} onClick={close}>Ок</Button>
       </div>
     </Dialog>
