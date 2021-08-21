@@ -23,6 +23,10 @@
   margin: 40px 0 0;
 }
 
+.title_blue {
+  color: #3971FF;
+}
+
 .subtitle {
   max-width: 690px;
   font-family: 'Raleway', sans-serif;
@@ -34,10 +38,6 @@
   margin: 40px 0 50px;
 }
 
-.main__box-image {
-  position: relative;
-}
-
 .main__image {
   display: block;
   object-fit: contain;
@@ -45,13 +45,6 @@
 
 .main__image_computer {
   width: 100%;
-}
-
-.main__image_phone {
-  position: absolute;
-  top: 36%;
-  right: 0;
-  width: 50%;
 }
 
 .main__form {
@@ -82,6 +75,11 @@
   cursor: pointer;
 }
 
+.main__submit svg {
+  width: 19px;
+  height: 13px;
+}
+
 .main__form .react-tel-input .form-control {
   width: 100%;
   background: #eee;
@@ -98,6 +96,7 @@
 }
 
 .main__trying {
+  width: max-content;
   font-family: 'SF Pro Display', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -132,16 +131,60 @@
     min-height: calc(100vh - 80px);
   }
 
+  .main__container {
+    grid-template-columns: 1fr;
+    grid-gap: 14px;
+    padding: 40px 25px;
+  }
+
   .title {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 30px;
     margin: 0;
   }
 
   .subtitle {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    margin: 20px 0 30px;
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  .main__box-image {
+    grid-row: 1;
+  }
+
+  .main__form {
+    grid-gap: 10px 0;
+  }
+
+  .main__submit {
+    border-radius: 0px 6px 6px 0px;
+    gap: 7px;
+    padding: 0 15px;
+
+    font-size: 15px;
+  }
+
+  .main__submit svg {
+    width: 13px;
+    height: 9px;
+  }
+  
+  .main__form .react-tel-input .form-control {
+    padding: 13px 14px 13px 58px;
+    border-radius: 6px 0 0 6px;
+    font-size: 15px;
+  }
+
+  .main__form .react-tel-input .country-list {
+    height: 150px;
+    width: calc(100vw - 50px);
+  }
+
+  .main__trying {
+    font-size: 18px;
+  }
+
+  .main__thanks {
+    padding: 18px 16px;
+    font-size: 18px;
   }
 }

@@ -95,7 +95,11 @@
 
 @media screen and (max-width: 600px) {
   .header__container {
-    padding: 20px;
+    padding: 45px 25px;
+  }
+
+  .header__box_right {
+    display: none;
   }
 
   .header__lang-current {
@@ -128,15 +132,5 @@
   .header__button-box {
     grid-template-columns: repeat(3, max-content);
     grid-column-gap: 12px;
-  }
-
-  .header__menu-button-mobile.MuiIconButton-root {
-    display: block;
-    margin: -12px;
-  }
-
-  .header__menu-button-mobile.MuiIconButton-root .MuiSvgIcon-root {
-    width: 40px;
-    height: 40px;
   }
 }
